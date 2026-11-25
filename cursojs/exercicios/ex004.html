@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Começando com DOM</title>
+
+    <style>
+            body {
+                background-color: rgba(164, 91, 233, 0.521);
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
+            h1 {
+                color: #333;
+            }
+            p {
+                font-size: 16px;
+            }
+        </style>
+
+</head>
+<body>
+    <h1>Iniciando estudos com o DOM</h1>
+    <p>Aprendendo a usar o <strong>DOM</strong></p>
+    <p>Testes de alteração</p>
+    <h3>Criando um elemento</h3>
+    <script>
+        document.getElementsByTagName("p")[1].innerHTML = "Alterando o conteúdo do segundo parágrafo";
+        var novoParagrafo = document.createElement("p");  // Cria uma variavel para receber um 'P'
+        novoParagrafo.innerHTML = "Este é um novo parágrafo criado com o DOM"; // Atribuindo um conteúdo ao 'P'
+        document.body.appendChild(novoParagrafo);  // Adicionando o 'P' criado ao final do body
+    </script>
+</body>
+</html>
