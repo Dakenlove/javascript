@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+
+    <style> 
+    body {
+        font-family: arial, sans-serif;
+    }
+    #area {
+        width: 200px;
+        height: 200px;
+        background-color: green;
+        line-height: 200px;
+        text-align: center;
+    }
+
+    #entrar {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        line-height: 200px;
+        text-align: center;
+        margin-top: 20px;
+    }
+    </style>
+
+</head>
+<body>
+    <h1>Eventos DOM</h1>
+    <p>Em termos simples, um evento DOM é uma ação que pode ser disparada por um elemento HTML, como um clique, uma tecla pressionada, etc.</p>
+    <div id="area" onclick="clicar()">
+        interaja
+    </div>
+     
+    <div id="entrar" onmouseover="entrar()"> Entrar!</div>
+
+    <script>
+        function clicar() {
+            var a = document.getElementById("area");
+            a.innerHTML = "Clicou!";
+            a.style.backgroundColor = 'blue';
+        }
+
+        function entrar() {
+            var b = document.getElementById("entrar");
+            b.innerHTML = "Você entrou!";
+            b.style.backgroundColor = 'green';
+        }
+    </script>
+</body>
+</html>
